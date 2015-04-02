@@ -1,0 +1,53 @@
+ <?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <script src="Turtle.js"></script>
+  <title>Turtle graphics</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+<div id='Work Window' align="center">
+      <div id='Graphics field'>
+        <svg id="myField" width="640px" height="420px">  
+          <rect x="0" y="0" width="640" height="420"
+                style="fill:blue;stroke:pink;stroke-width:5;fill-opacity:0.1;stroke-opacity:0.9" />
+          <circle id='turtleChest' cx='320' cy='210' r='10' stroke='black' stroke-width='2' fill='green' /> 
+  <path id='turtleNarration' d='M 320 210 L 320 220 ' stroke='rgb(0,0,0)' stroke-width='4' fill='none'></path> </svg>
+
+        </svg>
+      </div>
+        <p>
+        <button type="button" align='center' onclick="clearGraphicsField()">Clear field</button>
+        </p>
+  <div class="row">
+
+  <div id='commands' class="col-sm-6">
+  <header>Your commands:</header>
+    <div id='command' draggable="true" ondragstart="dragStart(event)"><b> Rotate </b></div>
+    <div id='command' draggable="true" ondragstart="dragStart(event)"><b> Go </b></div>
+    <div id='command' draggable="true" ondragstart="dragStart(event)"><b> Pick up/Lower a pen </b></div>
+    <div id='command' draggable="true" ondragstart="dragStart(event)"><b> Color of pen </b></div>
+    <div id='command' draggable="true" ondragstart="dragStart(event)"><b> Pen width </b></div>
+    <div id='command' draggable="true" ondragstart="dragStart(event)"><b> Show/Unshow turtle </b></div>
+    <div id='command' draggable="true" ondragstart="dragStart(event)"><b> Go to point </b></div>
+  </div>
+
+  <div id='algorithm' class="col-sm-6" ondrop='onDrop(event)' ondragover='onDragOver(event)'>
+    <header>Your algorithm:</header> '<input id='cycle' type="text" placeholder="Iterations number" id="FINDME">'
+    <button type="button" onclick="performTheAlgorithm()">Start!</button>
+  </div>
+</div>
+</div>
+</body>
+
+</html>
